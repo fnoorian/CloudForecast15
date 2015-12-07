@@ -45,7 +45,7 @@ curl http://localhost:5000/gateways/001/sensors/data/2015-12-20T13:40:20+1000 -d
 
 In Python, use `requests` package:
 ```python
-requests.put("http://localhost:5000/gateways/001/sensors/data/20151220T134020+1000", data = {'data':'{"voltage":14}'})
+requests.put("http://localhost:5000/gateways/001/sensors/data/2016-12-20T13:40:22+1000", data={'data':'{"voltage":24}'}, proxies={'http':''})
 ```
 
 
@@ -54,6 +54,11 @@ To retrieve data:
 
 ```bash
 curl http://localhost:5000/gateways/001/sensors/data/20151220T134020+1000
+```
+
+or 
+```python
+requests.get("http://localhost:5000/gateways/001/sensors/data/2016-12-20T13:40:22+1000", proxies={'http':''})
 ```
 
 it returns:
