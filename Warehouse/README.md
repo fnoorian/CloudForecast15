@@ -43,6 +43,11 @@ or
 curl http://localhost:5000/gateways/001/sensors/data/2015-12-20T13:40:20+1000 -d "data={\"voltage\":14}" -X PUT
 ```
 
+In Python, use `requests` package:
+```python
+requests.put("http://localhost:5000/gateways/001/sensors/data/20151220T134020+1000", data = {'data':'{"voltage":14}'})
+```
+
 
 
 To retrieve data:
